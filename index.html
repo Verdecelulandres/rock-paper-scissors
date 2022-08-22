@@ -8,14 +8,38 @@
 </head>
 <body>
     <script>
-        
-        let options = ["Rock", "Paper", "Scissors"]
-
+    
         function getComputerChoice(options) {
             return options[Math.floor(Math.random()*options.length)];
         }
+    
+        let options = ["Rock", "Paper", "Scissors"]
 
-        console.log(getComputerChoice(options));
+        function playround(playerSelection, computerSelection) {
+            if (playerSelection == computerSelection) {
+                return "That's an almighty draw partner";
+            }  else if (playerSelection == "Rock" && computerSelection == "Paper") {
+                return "You Lose! Paper beats Rock";
+            }  else if (playerSelection == "Paper" && computerSelection == "Scissors") {
+                return "You Lose! Scissors beats Paper";
+            }  else if (playerSelection == "Scissors" && computerSelection == "Rock") {
+                return "You Lose! Rock beats Scissors"
+            }  else if (playerSelection == "Paper" && computerSelection == "Rock") {
+                return "You Win! Paper beats Rock";
+            }  else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+                return "You Win! Scissors beats paper";
+            }  else if (playerSelection == "Rock" && computerSelection == "Scissors") {
+                return "You Win! Rock beats Scissors";
+            } else {
+                return "That's not an option partner, it is a Rock Paper scissors game, it ain't that hard";
+            }
+        }
+
+        const computerSelection = getComputerChoice(options);
+        const playerSelection = "Paper";
+        
+
+        console.log(playround(playerSelection, computerSelection));
 
     </script>
 </body>
