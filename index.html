@@ -15,6 +15,8 @@
     
         let options = ["rock", "paper", "scissors"]
 
+        
+
         function playround(playerSelection, computerSelection) {
             if (playerSelection.toLowerCase() == computerSelection) {
                 return "That's an almighty draw partner";
@@ -39,7 +41,9 @@
         const computerSelection = getComputerChoice(options);
         const playerSelection = prompt("Quickly! Rock, Paper or Scissors?");
         
-        console.log(playround(playerSelection, computerSelection));
+        let result = playround(playerSelection, computerSelection);
+
+        console.log(result);
 
     
 
