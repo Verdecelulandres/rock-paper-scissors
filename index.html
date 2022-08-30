@@ -18,28 +18,30 @@
         function playround(playerSelection, computerSelection) {
             if (playerSelection.toLowerCase() == computerSelection) {
                 return "That's an almighty draw partner";
-            }  else if (playerSelection.toLowerCase() == "Rock" && computerSelection == "Paper") {
+            }  else if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper") {
                 return "You Lose! Paper beats Rock";
-            }  else if (playerSelection.toLowerCase() == "Paper" && computerSelection == "Scissors") {
+            }  else if (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors") {
                 return "You Lose! Scissors beats Paper";
-            }  else if (playerSelection.toLowerCase() == "Scissors" && computerSelection == "Rock") {
+            }  else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock") {
                 return "You Lose! Rock beats Scissors"
-            }  else if (playerSelection.toLowerCase() == "Paper" && computerSelection == "Rock") {
+            }  else if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock") {
                 return "You Win! Paper beats Rock";
-            }  else if (playerSelection.toLowerCase() == "Scissors" && computerSelection == "Paper") {
+            }  else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper") {
                 return "You Win! Scissors beats paper";
-            }  else if (playerSelection.toLowerCase() == "Rock" && computerSelection == "Scissors") {
+            }  else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
                 return "You Win! Rock beats Scissors";
             } else {
                 return "That's not an option partner, it is a Rock Paper scissors game, it ain't that hard";
             }
         }
 
+        
         const computerSelection = getComputerChoice(options);
         const playerSelection = prompt("Quickly! Rock, Paper or Scissors?");
         
-
         console.log(playround(playerSelection, computerSelection));
+
+    
 
     </script>
 </body>
